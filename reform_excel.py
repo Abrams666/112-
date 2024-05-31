@@ -33,7 +33,10 @@ for i in range(3,1898):
     else:
         sheetx["A"+str(k)]=sheet["B"+str(i)].value
         sheetx["B"+str(k)]=sheet["C"+str(i)].value
-        sheetx["N"+str(k)]=sheet["F"+str(i)].value
+        if(str(sheet["F"+str(i)].value)=="-----"):
+            sheetx["N"+str(k)]=0
+        else:
+            sheetx["N"+str(k)]=sheet["F"+str(i)].value
 
         print(len(sheet["D"+str(i)].value))
     
