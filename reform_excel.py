@@ -23,6 +23,7 @@ sheetx["J1"]="生物加權"
 sheetx["K1"]="地理加權"
 sheetx["L1"]="歷史加權"
 sheetx["M1"]="公民加權"
+sheetx["N1"]="錄取分數"
 
 k=1
 for i in range(3,1898):
@@ -32,6 +33,7 @@ for i in range(3,1898):
     else:
         sheetx["A"+str(k)]=sheet["B"+str(i)].value
         sheetx["B"+str(k)]=sheet["C"+str(i)].value
+        sheetx["N"+str(k)]=sheet["F"+str(i)].value
 
         print(len(sheet["D"+str(i)].value))
     
